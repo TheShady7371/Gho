@@ -17,7 +17,7 @@ def receive_messages(client_socket):
 
 def send_messages(client_socket):
     while True:
-        message = input("Вы: ")
+        message = input()
         try:
             client_socket.send(message.encode('utf-8'))
         except Exception as e:
